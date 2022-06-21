@@ -16,9 +16,9 @@ app.get("/api/test", (req, res) => {
 
 app.use(express.static(path.join(__dirname, "./client/pages")));
 
-app.get("*", function (_, res) {
+app.get("/", function (_, res) {
   res.sendFile(
-    path.join(__dirname, "./client/pages/index.js"),
+    path.join(__dirname, "./client/pages/"),
     function (err) {
       if (err) {
         res.status(500).send(err);
